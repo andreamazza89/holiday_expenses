@@ -3,6 +3,7 @@
 class Person
 
 	@@persons_in_group = []
+	attr_accessor :total_spent
 
 	def self.persons_in_group
 		@@persons_in_group
@@ -12,6 +13,4 @@ class Person
 		@name = name
 		@@persons_in_group << name
 	end
-
-	
 end
