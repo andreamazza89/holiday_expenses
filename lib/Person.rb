@@ -4,6 +4,8 @@ class Person
 
 	@@persons_in_group = []
 	attr_accessor :total_spent
+	attr_reader :money_owed 	#This is a hash containing (person name => amount owed)
+	attr_reader :name
 
 	def self.persons_in_group
 		@@persons_in_group
@@ -13,4 +15,10 @@ class Person
 		@name = name
 		@@persons_in_group << name
 	end
+
+	def owes_to person, amount
+		@money_owed ||= {}
+		(@money_owed[person.name] == nil) ? (@money_owed[person.name] = amount) : (@money_owed[person.name] += amount)
+	end
+
 end
