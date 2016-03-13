@@ -8,6 +8,7 @@ class Receipt
 
 	def initialize
 		@receipts = []
+		@total_spent = 0
 	end
 
 	def add_expense tot, person, persons_involved, descr
