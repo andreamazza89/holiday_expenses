@@ -18,6 +18,10 @@ class Receipt
 		current_receipt[:description] = descr
 		current_receipt[:time] = Time.now.asctime				
 		@receipts << current_receipt 
+
+		@total_spent += tot
+		person.total_spent += tot
+
 	end
 
 end

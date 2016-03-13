@@ -14,6 +14,7 @@ class Person
 	def initialize(name)
 		@name = name
 		@@persons_in_group << name
+		@total_spent = 0
 	end
 
 	def owes_to person, amount
