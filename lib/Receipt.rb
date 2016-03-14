@@ -12,6 +12,7 @@ class Receipt
 	end
 
 	def add_expense tot, person, descr, *persons_involved 
+
 		current_receipt = Hash.new
 		current_receipt[:total] = tot
 		current_receipt[:paid_by] = person
@@ -23,7 +24,7 @@ class Receipt
 		@total_spent += tot
 		person.total_spent += tot
 
-		tot_each = tot/(persons_involved.length + 1) 
+		tot_each = tot/(persons_involved.length + 1.0) 
 		persons_involved.each {|p| p.owes_to(person, tot_each) }
 
 	end
