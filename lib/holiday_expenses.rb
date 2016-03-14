@@ -8,6 +8,4 @@ soll_16 = Receipt.new
 
 soll_16.add_expense(34, andrea, "Pizza", giorgio, mario)
 
-puts soll_16.receipts
-puts soll_16.total_spent
-puts andrea.total_spent
+puts giorgio.money_owed

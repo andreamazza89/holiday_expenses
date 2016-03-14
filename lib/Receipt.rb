@@ -23,6 +23,9 @@ class Receipt
 		@total_spent += tot
 		person.total_spent += tot
 
+		tot_each = tot/(persons_involved.length + 1) 
+		persons_involved.each {|p| p.owes_to(person, tot_each) }
+
 	end
 
 end
