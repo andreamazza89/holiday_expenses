@@ -1,11 +1,45 @@
 require_relative "Person.rb"
 require_relative "Receipt.rb"
 
-andrea = Person.new("andrea")
-giorgio = Person.new("giorgio")
-mario = Person.new("mario")
-soll_16 = Receipt.new
+def print_help
+	puts "This is a stub of the instructions"
+end
 
-soll_16.add_expense(34, andrea, "Pizza", giorgio, mario)
+def add_trip
+	puts "This is a stub of the add_trip function"
+end
 
-puts giorgio.money_owed
+def add_expense
+	puts "This is a stub of the add_expense function"
+end
+
+def money_owed
+	puts "This is a stub of the money_owed function"
+end
+
+puts "Welcome to the holiday expenses application.
+Type \"help\" for instructions."
+
+loop do
+	print "Enter a command: "
+	user_input = gets.chomp	
+	
+	case user_input
+		when "quit"
+			break
+		when "help"
+			print_help
+		when "add trip"
+			add_trip
+		when "add expense"
+			add_expense
+		when "money owed"
+			money_owed
+	end	
+
+end
+
+puts "GoodBye"
+
+
+
