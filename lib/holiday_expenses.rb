@@ -12,6 +12,10 @@ def add_trip
 	puts "Trip created, trip name: #{receipt.name}"
 end
 
+def add_person
+	puts "This is a stub of the add_person function"
+end
+
 def add_expense
 	puts "This is a stub of the add_expense function"
 end
@@ -34,6 +38,8 @@ loop do
 			print_help
 		when "add trip"
 			add_trip
+		when "add person"
+			add_person	
 		when "add expense"
 			add_expense
 		when "money owed"
