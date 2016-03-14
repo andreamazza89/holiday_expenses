@@ -5,8 +5,10 @@ class Receipt
 
 	attr_accessor :total_spent
 	attr_reader :receipts
+	attr_reader :name
 
-	def initialize
+	def initialize name
+		@name = name
 		@receipts = []
 		@total_spent = 0
 	end

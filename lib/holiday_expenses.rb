@@ -6,7 +6,10 @@ def print_help
 end
 
 def add_trip
-	puts "This is a stub of the add_trip function"
+	print "What would you like to call the trip? "
+	trip_name = gets.chomp
+	receipt = Receipt.new trip_name
+	puts "Trip created, trip name: #{receipt.name}"
 end
 
 def add_expense
