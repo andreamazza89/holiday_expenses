@@ -11,11 +11,11 @@ class Receipt
 		@total_spent = 0
 	end
 
-	def add_expense tot, person, persons_involved, descr
+	def add_expense tot, person, descr, *persons_involved 
 		current_receipt = Hash.new
 		current_receipt[:total] = tot
 		current_receipt[:paid_by] = person
-		current_receipt[:paid_for] = persons_involved #this is an array of persons
+		current_receipt[:paid_for] = persons_involved #this is an array of persons who owe the person who paid
 		current_receipt[:description] = descr
 		current_receipt[:time] = Time.now.asctime				
 		@receipts << current_receipt 
